@@ -13,4 +13,8 @@ export class ProductService {
   getProducts() {
     return this.httpClient.get(this.urlBase);
   }
+
+  getProductById(id: number){
+    return this.httpClient.get(`${this.urlBase}/${id}`);
+  }
 }
