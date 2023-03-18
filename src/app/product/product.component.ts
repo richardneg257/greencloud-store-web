@@ -9,6 +9,8 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductComponent {
 
+  product: any = {};
+
   constructor(private router: ActivatedRoute, private productService: ProductService) {
     router.params.subscribe(data => {
       //console.log('Este es el ID: ' + params['id']);
@@ -18,7 +20,7 @@ export class ProductComponent {
 
   getProductById(id: number) {
     this.productService.getProductById(id).subscribe(data => {
-      console.log(data);
+      this.product = data;
     });
   }
 }
