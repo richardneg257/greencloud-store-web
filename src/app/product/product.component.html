@@ -11,7 +11,12 @@
             <th></th>
         </thead>
         <tbody>
-            <tr></tr>
+            <tr *ngFor="let product of products; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{product.code}}</td>
+                <td>{{product.name}}</td>
+                <td><button type="button" class="btn btn-primary">Ver</button></td>
+            </tr>
         </tbody>
     </table>
 </div>

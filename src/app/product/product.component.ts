@@ -8,6 +8,8 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductComponent {
 
+  products: any = [];
+
   constructor(private productService: ProductService) {
     this.getProducts();
   }
@@ -15,7 +17,7 @@ export class ProductComponent {
   getProducts() {
     this.productService.getProducts()
       .subscribe((data) => {
-        console.log(data);
+        this.products = data;
       });
   }
 }
