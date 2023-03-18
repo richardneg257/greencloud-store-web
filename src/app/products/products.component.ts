@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css']
 })
-export class ProductComponent {
+export class ProductsComponent {
 
   products: any = [];
 
